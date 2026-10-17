@@ -1,0 +1,166 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f8;
+    padding: 30px 15px;
+    color: #292d3e;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #5145cd;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #777;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card {
+    padding: 22px 15px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.card h2 {
+    font-size: 22px;
+    overflow-wrap: anywhere;
+}
+
+.income h2 {
+    color: #168653;
+}
+
+.expense h2 {
+    color: #d94343;
+}
+
+.form-section,
+.history {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.form-section h2,
+.history h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+form {
+    display: grid;
+    gap: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4d5df;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 12px;
+    background: #5145cd;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3930a6;
+}
+
+#transactionList {
+    list-style: none;
+}
+
+#transactionList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.transaction-info small {
+    display: block;
+    color: #777;
+    margin-top: 5px;
+}
+
+.transaction-amount {
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    padding: 8px 10px;
+}
+
+#emptyMessage {
+    color: #888;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .form-section,
+    .history {
+        padding: 18px;
+    }
+
+    #transactionList li {
+        flex-wrap: wrap;
+    }
+}
